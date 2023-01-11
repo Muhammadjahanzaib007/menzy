@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "391837352163",
+    "project_id": "menzyapp-368b0",
+    "storage_bucket": "menzyapp-368b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391837352163:android:53a661f649c319311a05d6",
+        "android_client_info": {
+          "package_name": "com.flutterfairy.rewardapp.rewardapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391837352163-0520m91lmjo1eem6c7vi4e4suu7hqe90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCer4VUl5F2ORA1xjQbFq5q_pRyiirjfcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391837352163-0520m91lmjo1eem6c7vi4e4suu7hqe90.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "391837352163-s43hl8j24e5gcm6r3re5274sd3qevih8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.steptracker.waterreminder.maprunner"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391837352163:android:070b2132b0df7c0a1a05d6",
+        "android_client_info": {
+          "package_name": "com.menzy.io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391837352163-3c2cikn7d8t5u51s2h2pgv4l4609uj0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.menzy.io",
+            "certificate_hash": "dabbf18bb200a6402753ce835d3a583e35de8d73"
+          }
+        },
+        {
+          "client_id": "391837352163-4ummm5t7vsfjlru2t07v2ksds97qjvjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.menzy.io",
+            "certificate_hash": "c3a328008bc44be259f7e6bed8b9a10810198c14"
+          }
+        },
+        {
+          "client_id": "391837352163-lragblhntv0bfdqa6smv8sort5ncuq14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.menzy.io",
+            "certificate_hash": "72dbe93c16a9bf1981d0030ef3ab494101cc198d"
+          }
+        },
+        {
+          "client_id": "391837352163-0520m91lmjo1eem6c7vi4e4suu7hqe90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCer4VUl5F2ORA1xjQbFq5q_pRyiirjfcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391837352163-0520m91lmjo1eem6c7vi4e4suu7hqe90.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "391837352163-s43hl8j24e5gcm6r3re5274sd3qevih8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.steptracker.waterreminder.maprunner"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

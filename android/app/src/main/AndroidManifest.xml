@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.menzy.io">
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.MICROPHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.Write_EXTERNAL_STORAGE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <category android:name="android.intent.category.APP_EMAIL" />
+            <data android:mimeType="*/*" />
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <queries>
+        <!-- If your app checks for SMS support -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="sms" />
+        </intent>
+        <!-- If your app checks for call support -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="tel" />
+        </intent>
+    </queries>
+    <application
+
+        android:icon="@mipmap/launcher_icon"
+        android:label="Menzy"
+        android:exported="true"
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        android:requestLegacyExternalStorage="true">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDrufxSqtMwqN_pr3cljEDrwcLfeY5OS3M" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+        <receiver android:name="dk.cachet.activity_recognition_flutter.ActivityRecognizedBroadcastReceiver"/>
+        <service
+            android:name="dk.cachet.activity_recognition_flutter.ActivityRecognizedService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+        <service android:name="dk.cachet.activity_recognition_flutter.ForegroundService" />
+
+
+        <activity
+
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:showWhenLocked="true"
+            android:theme="@style/LaunchTheme"
+            android:turnScreenOn="true"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:exported="true">
+
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+
+            <!-- <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@mipmap/ic_splash" /> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with YOUR_SCHEME://YOUR_HOST -->
+<!--                <data-->
+<!--                    android:scheme="https"-->
+<!--                    android:host="menzyapp.page.link" />-->
+            </intent-filter>
+            <intent-filter>
+                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UnityPlayerActivity"
+            android:launchMode="singleTask"
+            android:process=":unityplayer123" />
+
+        <!--        <activity-->
+        <!--            android:name="com.xraph.plugin.flutter_unity_widget.OverrideUnityActivity"-->
+        <!--            android:theme="@style/UnityThemeSelector"-->
+        <!--            android:screenOrientation="fullSensor"-->
+        <!--            android:launchMode="singleTask"-->
+        <!--            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"-->
+        <!--            android:hardwareAccelerated="false"-->
+        <!--            android:process=":Unity"-->
+        <!--            >-->
+        <!--            <meta-data android:name="com.xraph.plugins.flutter_unity_widget.OverrideUnityActivity" android:value="true" />-->
+        <!--        </activity>-->
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+<!--        <meta-data android:name="com.facebook.sdk.ApplicationId"-->
+<!--            android:value="@string/facebook_app_id"/>-->
+
+<!--        <meta-data android:name="com.facebook.sdk.ApplicationName"-->
+<!--            android:value="@string/app_name"/>-->
+
+<!--        <activity android:name="com.facebook.FacebookActivity"-->
+<!--            android:configChanges=-->
+<!--                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+<!--            android:label="@string/app_name" />-->
+
+        <!--        <provider android:authorities="com.facebook.app.FacebookContentProvider{638176107727762}"-->
+        <!--            android:name="com.facebook.FacebookContentProvider"-->
+        <!--            android:exported="true"/>-->
+
+        <!--        <provider android:name="androidx.core.content.FileProvider"-->
+        <!--            android:authorities="{APP_PACKAGE}.social.share.fileprovider"-->
+        <!--            android:exported="false"-->
+        <!--            android:grantUriPermissions="true">-->
+        <!--            <meta-data-->
+        <!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+        <!--                android:resource="@xml/provider_paths"/>-->
+        <!--        </provider>-->
+    </application>
+
+
+</manifest>
